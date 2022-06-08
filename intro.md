@@ -181,13 +181,6 @@ Tracker view:
 	```
   * `+=` does not exist
 
-## Pro mode
-
-* There's also a paid ($10) [PRO version](https://nesbox.itch.io/tic80) of TIC-80
-* You can save cartridges as text (`.lua`, etc) so you can edit code in [external editors](https://github.com/nesbox/TIC-80/wiki/external-editor)
-* You can export games to executables that don't contain the TIC-80 editors
-
-
 ## Sprites...
 
 ## Map...
@@ -306,6 +299,12 @@ function collision(ent) --A very simple tilemap collision detection.
 end
 
 ```
+
+## Pro mode
+
+* There's also a paid ($10) [PRO version](https://nesbox.itch.io/tic80) of TIC-80
+* You can save cartridges as text (`.lua`, etc) so you can edit code in [external editors](https://github.com/nesbox/TIC-80/wiki/external-editor)
+* You can export games to executables that don't contain the TIC-80 editors
 
 ## Where to learn
 
