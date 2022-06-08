@@ -35,6 +35,7 @@ paginate: true
   * This is used for debugging and moving in the filesystem
 * You can move between the editor view and the command line by pressing ***ESC***
 * You can move between different editors with the ***F*** keys
+* More [hotkeys](https://github.com/nesbox/TIC-80/wiki/Hotkeys)
 
 ## Editors
 ### Code editor (F1)
@@ -54,32 +55,21 @@ paginate: true
 
 ### Music editor (F5)
 
-* Piano roll view
+Piano roll view:
+
 ![](imgs/music1.gif)
 
 ---
-* Tracker view
+Tracker view:
+
 ![](imgs/music2.gif)
 
-## Lua in a nutshell
+## [Display](https://github.com/nesbox/TIC-80/wiki/display) coordinates
 
-* Lua is the default programming language of TIC-80
-* [Learn Lua in 15 minutes](https://tylerneylon.com/a/learn-lua/)
-* Python-like dynamic language where indents don't matter. 
-  * `if huge then return true end`
-  * `function increment(a) return a+1 end`
-* Tables are everything and can have everything
-  * Indexing starts from one: `tbl[1]`
-  * You can have numbered and named keys in the same table
-	```Lua
-	tbl = {"hello", "world", name = "sillyTable",}
-	for index, value in pairs(tbl) do
-		trace(value)
-	end
-	```
+![](https://github.com/nesbox/TIC-80/wiki/images/coordinates.png)
 ## Hello world game
 
-* Use the `new` command to create a new default cartridge
+* Use the `new lua` command to create a new default cartridge
 * Use the command `run` or press ***CTRL+R*** to run the game.
 * Let's now remove the code and try to recreate the important parts.
 * The most important function we need is [TIC](https://github.com/nesbox/TIC-80/wiki/TIC), the ***main loop*** which runs in 60 fps.
@@ -117,10 +107,11 @@ paginate: true
 
 * Controller & keyboard (by default, ABXY buttons are mapped to ZXAS keys)
   * 0,1,2,3,4,5,6,7: up, down, left, right, A, B, X, Y
+  * See [Keymap](https://github.com/nesbox/TIC-80/wiki/key-map) for the rest (multiplayer for up to 4 controllers supported!)
   * [btn](https://github.com/nesbox/TIC-80/wiki/btn): Get continuous input. "`GetButton`"
   * [btnp](https://github.com/nesbox/TIC-80/wiki/btnp): Get input for only one frame. "`GetButtonDown`"
 * [key](https://github.com/nesbox/TIC-80/wiki/key) & [keyp](https://github.com/nesbox/TIC-80/wiki/keyp): Get input from keyboard "`GetKey`" & "`GetKeyDown`"
-  * Keycodes
+  * [Keyboard keycodes](https://github.com/nesbox/TIC-80/wiki/key)
 * [mouse](https://github.com/nesbox/TIC-80/wiki/mouse): Mouse input
 
 ### Sound
@@ -133,12 +124,16 @@ paginate: true
 * [mget](https://github.com/nesbox/TIC-80/wiki/mget) & [mset](https://github.com/nesbox/TIC-80/wiki/mset): Get & set tile in tile map
 * [fget](https://github.com/nesbox/TIC-80/wiki/fget) & [fset](https://github.com/nesbox/TIC-80/wiki/fset): Get & set sprite flag
 * [pmem](https://github.com/nesbox/TIC-80/wiki/pmem): Get or set value in persistent memory (load & save!)
-* [peek*](https://github.com/nesbox/TIC-80/wiki/peek) & [poke*](https://github.com/nesbox/TIC-80/wiki/poke): 
+* [peek*](https://github.com/nesbox/TIC-80/wiki/peek) & [poke*](https://github.com/nesbox/TIC-80/wiki/poke): manipulate internal RAM & VRAM
+  * [Memory layout](https://github.com/nesbox/TIC-80/wiki/RAM)
 ### Tricks
 
 * [BDR](https://github.com/nesbox/TIC-80/wiki/BDR)
   * Callback function for drawing or manipulating stuff between every "scanline", plus border
   * Called 143 times per frame 
+* [Manipulating the color palette](https://github.com/nesbox/TIC-80/wiki/palette)
+* [More graphics with less colors: bits per pixel](https://github.com/nesbox/TIC-80/wiki/Bits-Per-Pixel)
+
 
 ## Console
 
@@ -152,6 +147,47 @@ paginate: true
     * `export win`
     * `export music id==1`: Export song 1
     * etc... 
+
+## Lua in a nutshell
+
+* Lua is the default programming language of TIC-80. 
+  * [Some others](https://github.com/nesbox/TIC-80/wiki/supported-languages) are supported as well
+* [Learn Lua in 15 minutes](https://tylerneylon.com/a/learn-lua/)
+* Lua is a Python-like dynamic language where indents don't matter. 
+  * ```Lua
+  	if huge then return true end
+	```
+  * ```Lua
+  	for i=1,10 do trace(i) end
+	```
+  * ```Lua
+	function increment(a) return a+1 end
+	```
+
+---
+* By default, every variable has a `nil` value
+* Variables are `global` by default (use the `local` keyword!)
+* Tables are everything and can have everything
+  * You can have numbered and named keys in the same table
+	```Lua
+	tbl = {"hello", "world", name = "sillyTable",}
+	for index, value in pairs(tbl) do
+		trace(value)
+	end
+	```
+* Gotchas
+  * Table indexing starts from one: `tbl[1]`
+  * ```Lua
+	if a ~= 3 then trace("a is not 3") end
+	```
+  * `+=` does not exist
+
+## Pro mode
+
+* There's also a paid ($10) [PRO version](https://nesbox.itch.io/tic80) of TIC-80
+* You can save cartridges as text (`.lua`, etc) so you can edit code in [external editors](https://github.com/nesbox/TIC-80/wiki/external-editor)
+* You can export games to executables that don't contain the TIC-80 editors
+
 
 ## Sprites...
 
@@ -284,7 +320,7 @@ end
 * [tic80.com: Tool cartridges](http://tic80.com/play?cat=2&sort=2)
 
 
-## In a nutshell...
+## In a nutshell
 
 * All tools in one window: Fast prototyping!
 * Create retro-ish games with direct memory access 
