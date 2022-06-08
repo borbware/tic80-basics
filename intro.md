@@ -88,7 +88,6 @@ Tracker view:
 
 * [TIC](https://github.com/nesbox/TIC-80/wiki/TIC)
 	* Callback function for the main loop. Called once per frame, 60 times per second
-
 * System
   * [trace](https://github.com/nesbox/TIC-80/wiki/trace): Print to console "`Debug.Log`"
   * [time](https://github.com/nesbox/TIC-80/wiki/time): Get time passed after the game started
