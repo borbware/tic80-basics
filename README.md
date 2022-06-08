@@ -1,2 +1,3 @@
-# tic80-basics
+# TIC-80 basics
+
 Learning materials for TIC-80 basics
