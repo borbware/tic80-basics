@@ -266,6 +266,10 @@ Tracker view:
 	function rm(tbl,E)
 		for i,v in ipairs(tbl)do if v==E then del(tbl,i)return end end
 	end
+	function has(tbl,val)--if tbl has val, returns key
+		for k,v in pairs(tbl)do if v==val then return k end end
+		return false
+	end
 	function any(tbl,cond)for i,v in pairs(tbl)do if cond(v,i)then return true end end return false end
 	function one(tbl,cond)local n=0;for i,v in pairs(tbl)do if cond(v,i)then n=n+1 end end return n==1 end 
 	function all(tbl,cond)for i,v in pairs(tbl)do if not cond(v,i)then return false end end return true end
