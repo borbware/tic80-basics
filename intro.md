@@ -56,7 +56,7 @@ paginate: true
 ### Sfx editor (F4)
 
 ![](imgs/sfx.gif)
-* 16 soundwaves you can draw yourself
+* 16 sound waveforms you can draw yourself
 * 64 instruments
 
 ### Music editor (F5)
@@ -212,52 +212,78 @@ Tracker view:
 ## Music...
 
 ## Examples
-### Helpers
+### Boilerplate code
 
-```Lua
---shorthand notations for math functions
-pi=math.pi
-max=math.max
-min=math.min
-sin=math.sin
-cos=math.cos
-exp=math.exp
-abs=math.abs
-sqrt=math.sqrt
-rnd=math.random
-floor=math.floor
-ceil=math.ceil
+* Button indices (so no need to remember numbers with btn)
+	```
+	UP=0
+	DOWN=1
+	LEFT=2
+	RIGHT=3
 
---math helper functions
-function sign(n) return n>0 and 1 or n<0 and -1 or 0 end
-function clamp(n,lo,hi) return min(max(n,lo),hi) end
-function lerp(a,b,t) return (1-t)*a+t*b end--t=0..1
-function dist(a,b) return sqrt(a^2+b^2) end
-function round(num, decplaces)
-	local mult = 10^(decplaces or 0)
-	return math.floor(num * mult + 0.5) / mult
-end
-```
+	A=4 --z
+	B=5 --x
+	X=6 --a
+	Y=7 --s
+	```
 ---
-```Lua
-str=string.format
-del=table.remove
-to=table.insert
+* Math shorthands & helper functions
+	```Lua
+	pi=math.pi
+	max=math.max
+	min=math.min
+	sin=math.sin
+	cos=math.cos
+	exp=math.exp
+	abs=math.abs
+	sqrt=math.sqrt
+	rnd=math.random
+	floor=math.floor
+	ceil=math.ceil
+	angle=function(x,y)return math.atan2(y,x)end
 
-function rm(tbl,E)
-	for i,v in ipairs(tbl)do if v==E then del(tbl,i)return end end
-end
+	function sign(n) return n>0 and 1 or n<0 and -1 or 0 end
+	function clamp(n,lo,hi) return min(max(n,lo),hi) end
+	function lerp(a,b,t) return (1-t)*a+t*b end--t=0..1
+	function dist(a,b) return sqrt(a^2+b^2) end
+	function round(num, decplaces)
+		local mult = 10^(decplaces or 0)
+		return math.floor(num * mult + 0.5) / mult
+	end
+	function AABB(e,v)
+		return v~=e and e.x+e.w>v.x and e.x<v.x+v.w and e.y+e.h>v.y and e.y<v.y+v.h
+	end
+	```
 
---buttons (so no need to remember numbers with btn)
-UP=0
-DOWN=1
-LEFT=2
-RIGHT=3
-A=4 --z
-B=5 --x
-X=6 --a
-Y=7 --s
-```
+---
+* Table shorthands & helper functions
+	```Lua
+	str=string.format
+	del=table.remove
+	to=table.insert
+	sort=table.sort
+
+	function rm(tbl,E)
+		for i,v in ipairs(tbl)do if v==E then del(tbl,i)return end end
+	end
+	function any(tbl,cond)for i,v in pairs(tbl)do if cond(v,i)then return true end end return false end
+	function one(tbl,cond)local n=0;for i,v in pairs(tbl)do if cond(v,i)then n=n+1 end end return n==1 end 
+	function all(tbl,cond)for i,v in pairs(tbl)do if not cond(v,i)then return false end end return true end
+	function find(tbl,cond)for i,v in pairs(tbl)do if cond(v,i)then return v end end end
+	function filter(tbl,cond)
+		local filtered={}
+		for i,v in pairs(tbl)do if cond(v,i)then to(filtered,v)end end
+		return filtered
+	end
+	function ripairs(t)--reverse ipairs. https://gist.github.com/balaam/3122129
+		return function(t,i)
+			i=i-1
+			if i~=0 then return i,t[i]
+			end
+		end, t,#t+1
+	end
+	```
+	* [Deepcopy](deepcopy.lua) & [Table print](tableprint.lua)
 ### Simple structure example
 
 ```Lua
@@ -337,12 +363,13 @@ end
 
 * There's also a paid ($10) [PRO version](https://nesbox.itch.io/tic80) of TIC-80
 * 8 times the size with ***memory banks***
-  * You can swap between e.g., sprite banks in runtime (only one swap per frame per bank!)
-  * You get 
+  * You can swap between e.g., different sprite banks in runtime 
+    * (only one swap per frame per bank!)
+  * 8 times 64KB for code, no banks
 * You can save cartridges as text (`.lua`, etc) so you can edit code in [external editors](https://github.com/nesbox/TIC-80/wiki/external-editor)
   * Also, because your whole game is stored as a text file, you can easily extend TIC-80 functionality with Python scripts and the like
 * ***Bonus:*** You can export games to executables that don't contain the TIC-80 editors
-* Separate your game into multiple files with `require("file.lua")`!
+* ***Bonus 2:*** Separate your game into multiple files with `require("file.lua")`!
 
 ## Where to learn
 
