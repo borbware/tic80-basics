@@ -5,15 +5,16 @@ paginate: true
 <!-- headingDivider: 3 -->
 <!-- class: default -->
 
-# TIC-80 basics
+# Achieve gamedev nirvana with TIC-80
 
 ## What is TIC-80?
 
 * TIC-80 is a free and open source ***fantasy computer***
   * Similar to [Pico-8](https://www.lexaloffle.com/pico-8.php), the most well-known fantasy console
+  * More versatile, though. No shade
 * Great for making, playing and sharing ***tiny games***
 * ***Built-in tools*** for development: code, sprites, maps, sound editors and the command line
-* ***Artificial limitations:*** resolution, color palette, chiptune channels, game size...
+* ***Artificial limitations:*** low resolution, color palette, chiptune channels, game size...
 * The game is stored as a `.tic` ***cartridge file*** 
   * It can be uploaded to the [TIC-80 website](http://tic80.com/)
   * (...but you can also export executables!)
@@ -35,25 +36,32 @@ paginate: true
   * This is used for debugging and moving in the filesystem
 * You can move between the editor view and the command line by pressing ***ESC***
 * You can move between different editors with the ***F*** keys
-* More [hotkeys](https://github.com/nesbox/TIC-80/wiki/Hotkeys)
+* More hotkeys [here](https://github.com/nesbox/TIC-80/wiki/Hotkeys) 
 
 ## Editors
 ### Code editor (F1)
 
 ![](imgs/code.gif)
+* 64KB of code
 ### Sprite editor (F2)
 
 ![](imgs/sprite.gif)
-
+* 512 8x8 sprites divided into foreground and background
+* Changeable 16-color palette
 ### Map editor (F3)
 
 ![](imgs/map.gif)
+* A single-layer map of 240x136 8x8 tiles
 
 ### Sfx editor (F4)
 
 ![](imgs/sfx.gif)
+* 16 soundwaves you can draw yourself
+* 64 instruments
 
 ### Music editor (F5)
+
+* 8 tracks consisting of 60 patterns
 
 Piano roll view:
 
@@ -67,6 +75,19 @@ Tracker view:
 ## [Display](https://github.com/nesbox/TIC-80/wiki/display) coordinates
 
 ![](https://github.com/nesbox/TIC-80/wiki/images/coordinates.png)
+
+## What about the nirvana part though
+
+* Only one window: no distractions!
+* No compile time: Test your creations *INSTANTLY*.
+* No bullshit: If you want to paint a pixel in `(x=30, y=15)` red, you *can*. 
+* Low resolution & 16 colors: 
+  * Less decisions to make.
+  * They're already premade for you, by the engine.
+  * Just make your game.
+* Limited yet expressive set of tools
+  * Limitations breed creativity, after all!
+
 ## Hello world game
 
 * Use the `new lua` command to create a new default cartridge
@@ -79,6 +100,40 @@ Tracker view:
   * Then, we can make the sprite move by getting ***input***: [btn](https://github.com/nesbox/TIC-80/wiki/btn)
   * Now we notice that the screen doesn't get cleared automatically. Let's call [cls](https://github.com/nesbox/TIC-80/wiki/cls)
 * And we're done! 
+
+## Lua in a nutshell
+
+* Lua is the default programming language of TIC-80. 
+  * [Some others](https://github.com/nesbox/TIC-80/wiki/supported-languages) are supported as well
+* [Learn Lua in 15 minutes](https://tylerneylon.com/a/learn-lua/)
+* Lua is a Python-like dynamic language where indents don't matter. 
+  * ```Lua
+  	if huge then return true end
+	```
+  * ```Lua
+  	for i=1,10 do trace(i) end
+	```
+  * ```Lua
+	function increment(a) return a+1 end
+	```
+---
+* By default, every variable has a `nil` value
+* Variables are `global` by default (use the `local` keyword!)
+* Tables are everything and can have everything
+  * You can have numbered and named keys in the same table
+	```Lua
+	tbl = {"hello", "world", name = "sillyTable",}
+	for index, value in pairs(tbl) do
+		trace(value)
+	end
+	```
+* Gotchas
+  * Table indexing starts from one: `tbl[1]`
+  * ```Lua
+	if a ~= 3 then trace("a is not 3") end
+	```
+  * `+=` does not exist
+
 
 ## Important API functions
 
@@ -147,39 +202,6 @@ Tracker view:
     * `export music id==1`: Export song 1
     * etc... 
 
-## Lua in a nutshell
-
-* Lua is the default programming language of TIC-80. 
-  * [Some others](https://github.com/nesbox/TIC-80/wiki/supported-languages) are supported as well
-* [Learn Lua in 15 minutes](https://tylerneylon.com/a/learn-lua/)
-* Lua is a Python-like dynamic language where indents don't matter. 
-  * ```Lua
-  	if huge then return true end
-	```
-  * ```Lua
-  	for i=1,10 do trace(i) end
-	```
-  * ```Lua
-	function increment(a) return a+1 end
-	```
-
----
-* By default, every variable has a `nil` value
-* Variables are `global` by default (use the `local` keyword!)
-* Tables are everything and can have everything
-  * You can have numbered and named keys in the same table
-	```Lua
-	tbl = {"hello", "world", name = "sillyTable",}
-	for index, value in pairs(tbl) do
-		trace(value)
-	end
-	```
-* Gotchas
-  * Table indexing starts from one: `tbl[1]`
-  * ```Lua
-	if a ~= 3 then trace("a is not 3") end
-	```
-  * `+=` does not exist
 
 ## Sprites...
 
@@ -300,11 +322,27 @@ end
 
 ```
 
+## More nirvana
+
+* Small API
+  * We basically went through 80% of it already
+  * Takes very little time to learn *EVERYTHING* about the engine!
+* No game-breaking engine updates
+  * Before 1.0, updates have brought *some* changes
+  * Changes can still happen, but it's fast to migrate your project to the newest version
+* Open-source: You can make your own forks of the engine and suggest changes, bugfixes, new features....
+* Ever growing friendly community ([Discord](https://discord.gg/3zek7yJD) & [Telegram](https://t.me/tic80))
+
 ## Pro mode
 
 * There's also a paid ($10) [PRO version](https://nesbox.itch.io/tic80) of TIC-80
+* 8 times the size with ***memory banks***
+  * You can swap between e.g., sprite banks in runtime (only one swap per frame per bank!)
+  * You get 
 * You can save cartridges as text (`.lua`, etc) so you can edit code in [external editors](https://github.com/nesbox/TIC-80/wiki/external-editor)
-* You can export games to executables that don't contain the TIC-80 editors
+  * Also, because your whole game is stored as a text file, you can easily extend TIC-80 functionality with Python scripts and the like
+* ***Bonus:*** You can export games to executables that don't contain the TIC-80 editors
+* Separate your game into multiple files with `require("file.lua")`!
 
 ## Where to learn
 
