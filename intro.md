@@ -80,26 +80,27 @@ Tracker view:
 
 * Only one window: no distractions!
 * No compile time: Test your creations *INSTANTLY*.
-* No bullshit: If you want to paint a pixel in `(x=30, y=15)` red, you *can*. 
-* Low resolution & 16 colors: 
-  * Less decisions to make.
-  * They're already premade for you, by the engine.
+* No bullshit: If you want to paint a pixel red in `(x=30, y=15)`, you *can*. 
+* Low resolution & ready-to-use 16 color palette: 
+  * Some decisions are already premade for you, by the engine.
   * Just make your game.
-* Limited yet expressive set of tools
+* Limited yet *expressive* set of tools
   * Limitations breed creativity, after all!
 
 ## Hello world game
 
-* Use the `new lua` command to create a new default cartridge
+* Use the `new lua` command to create a new default cartridge programmed in Lua
 * Use the command `run` or press ***CTRL+R*** to run the game.
-* Let's now remove the code and try to recreate the important parts.
+* ***ESC*** pauses the game.
+* Let's now remove the default code and try to recreate the important parts.
+---
 * The most important function we need is [TIC](https://github.com/nesbox/TIC-80/wiki/TIC), the ***main loop*** which runs in 60 fps.
   * Inside it, you put everything that you want to ***update & draw on screen***
-  * So let's put a [print](https://github.com/nesbox/TIC-80/wiki/print) call inside it to draw ***text*** on screen
-  * We can also use the [spr](https://github.com/nesbox/TIC-80/wiki/spr) function to draw a ***sprite***
-  * Then, we can make the sprite move by getting ***input***: [btn](https://github.com/nesbox/TIC-80/wiki/btn)
-  * Now we notice that the screen doesn't get cleared automatically. Let's call [cls](https://github.com/nesbox/TIC-80/wiki/cls)
-* And we're done! 
+* So let's put a [print](https://github.com/nesbox/TIC-80/wiki/print) call inside it to draw ***text*** on screen
+* We can also use the [spr](https://github.com/nesbox/TIC-80/wiki/spr) function to draw a ***sprite***
+* Then, we can make the sprite move by getting ***input***: [btn](https://github.com/nesbox/TIC-80/wiki/btn)
+* Now we notice that the ***screen doesn't get cleared*** automatically. Let's call [cls](https://github.com/nesbox/TIC-80/wiki/cls)
+* ...and we're done! 
 
 ## Lua in a nutshell
 
@@ -117,7 +118,7 @@ Tracker view:
 	function increment(a) return a+1 end
 	```
 ---
-* By default, every variable has a `nil` value
+* By default, every variable has a "falsy" `nil` value
 * Variables are `global` by default (use the `local` keyword!)
 * Tables are everything and can have everything
   * You can have numbered and named keys in the same table
