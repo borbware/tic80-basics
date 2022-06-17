@@ -216,7 +216,7 @@ Then we have
 t=t+1
 ```
 
-`TIC() `gets called 60 times per second, and every time t is increased by 1. So in one second, it gets increased by 60! It tells the passage of _time_, and its units are _frames_, not _seconds_. It will provide itself useful later!
+`TIC()` gets called 60 times per second, and every time t is increased by 1. So in one second, it gets increased by 60! It tells the passage of _time_, and its units are _frames_, not _seconds_. It will provide itself useful later!
 
 An important note: to be able to use the expression above, we have to have an _initial value_ for `t`, and at the beginning, we declared it to be `0`. In Python we could use a shorthand `t+=1`, but on Lua this isn't unfortunately possible!
 
