@@ -1,10 +1,11 @@
 ---
 marp: true
 paginate: true
+theme: borbtheme
 math: mathjax
 ---
 <!-- headingDivider: 3 -->
-<!-- class: default -->
+<!-- class: invert -->
 
 # 1. The Default Cartridge
 

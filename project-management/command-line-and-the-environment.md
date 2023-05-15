@@ -50,3 +50,7 @@ theme: borbtheme
 ---
 
 ![](imgs/env-help.png)
+
+---
+
+***Note:*** Windows loads the environment variables when you open a new terminal. After modifying Path, restart the terminal (if you use VS Code, you have to restart VS Code).

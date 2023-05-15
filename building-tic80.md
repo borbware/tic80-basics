@@ -1,19 +1,20 @@
 ---
 marp: true
 paginate: true
+theme: borbtheme
 math: mathjax
 ---
 <!-- headingDivider: 3 -->
-<!-- class: default -->
+<!-- class: invert -->
 
 # Building TIC-80
 
-## So, you want to build TIC-80 yourself
+## So you want to build TIC-80 yourself
 
 * Clone the TIC-80 repository to your code folder with
   * `git clone --recursive https://github.com/nesbox/TIC-80.git`
 * ***Note:*** If you forgot to clone recursively, you have to run:
-	* `git submodule update --init --recursive`.
+	* `git submodule update --init --recursive`
 
 ## The building process
 
@@ -34,6 +35,7 @@ math: mathjax
 * [MinGW-w64](http://mingw-w64.org) (see next slide!)
   * Good luck finding anything on the official website
   * You have two options, described below
+  * WIP: Both will fail lol. No idea how to do this
 
 ### MinGW Option 1. MinGW bundled with Ruby
 
@@ -41,6 +43,7 @@ math: mathjax
 * `<ruby-installation-folder>\msys64\ucrt64\bin`
   * For me it was `C:\Program Files (x64)\Ruby31-x64\msys64\ucrt64\bin`
 * Add this folder to system path environment variables (see instructions [here](project-management/command-line-and-the-environment.md#windows-environment-variables))
+* If this method fails, remove the folder from System Path, and follow MinGW option 2 (described below).
 
 ### MinGW option 2. Winlibs
 
@@ -70,7 +73,28 @@ math: mathjax
 * Run `mingw32-make -j4`
   * The built executable should appear under `build/bin`
 
+## Build errors
+
+* If Cmake fails, see the `build/CMakeFiles/CMakeError.log` for clues
+* Before trying CMake again, clear the cache: Remove `build/CMakeCache.txt` and the `CMakeFiles` folder.
+
+### Mruby
+
+```
+[ 17%] Built target mruby_vendor
+mingw32-make: *** [Makefile:135: all] Error 2
+```
+  * If mruby fails, you have most likely cloned your repo before mruby was added to the TIC-80 codebase.
+  * Detonate the repo and start from scratch. 
+
+### Note about cmake
+  * `-- Looking for strlcat - not found`
+  * Don't worry about these "not found" messages
+
 ## Creating a fork of the TIC-80 repository
 
 * So, you want to make TIC-80 better.
-* WIP
+* TIC-80 GitHub page: *Fork > Create a new fork*
+* Clone your TIC-80 repo
+* Add the original repo as a new remote:
+  * `git remote add nesbox https://github.com/nesbox/TIC-80.git`
