@@ -1,0 +1,11 @@
+{
+	"markdown.marp.themes": ["./themes/borbtheme.css"],
+	"emeraldwalk.runonsave": {
+		"commands": [
+			{
+				"match": "\\.md$",
+				"cmd": "cd ${fileDirname} && echo marp ${fileBasename} -o ${fileBasenameNoExt}-slides.html --html true"
+			},
+		]
+	}
+}

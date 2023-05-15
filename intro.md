@@ -36,7 +36,7 @@ paginate: true
   * This is used for debugging and moving in the filesystem
 * You can move between the editor view and the command line by pressing ***ESC***
 * You can move between different editors with the ***F*** keys
-* More hotkeys [here](https://github.com/nesbox/TIC-80/wiki/Hotkeys) 
+* More hotkeys [here](https://github.com/nesbox/TIC-80/wiki/Hotkeys)
 
 ## Editors
 ### Code editor (F1)
@@ -93,6 +93,8 @@ Tracker view:
 * Use the command `run` or press ***CTRL+R*** to run the game.
 * ***ESC*** pauses the game.
 * Let's now remove the default code and try to recreate the important parts.
+* ***HOX:*** In version 1.0, you have to turn on *Dev Mode* to make transition between the game and the editors faster
+  * `menu` *> Options > Dev Mode: ON*
 ---
 * The most important function we need is [TIC](https://github.com/nesbox/TIC-80/wiki/TIC), the ***main loop*** which runs in 60 fps.
   * Inside it, you put everything that you want to ***update & draw on screen***
@@ -203,7 +205,7 @@ Tracker view:
     * `export music id==1`: Export song 1
     * etc... 
 
-
+<!-- 
 ## Sprites...
 
 ## Map...
@@ -211,6 +213,7 @@ Tracker view:
 ## Sfx...
 
 ## Music...
+-->
 
 ## Examples
 ### Boilerplate code
@@ -394,3 +397,4 @@ end
 * Create retro-ish games with direct memory access 
   * ...but with the convenience of dynamic programming languages
   * (bonus: get cool retro glitches!)
+* Wishlist [EMUUROM](www.emuurom.com)
