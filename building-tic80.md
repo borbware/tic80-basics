@@ -8,16 +8,19 @@ math: mathjax
 
 # Building TIC-80
 
-## So, you want to make TIC-80 better.
+## So, you want to build TIC-80 yourself
 
-* If you forgot to clone recursively, you have to run:
+* Clone the TIC-80 repository to your code folder with
+  * `git clone --recursive https://github.com/nesbox/TIC-80.git`
+* ***Note:*** If you forgot to clone recursively, you have to run:
 	* `git submodule update --init --recursive`.
 
 ## The building process
 
 * Building TIC-80, like most software, is a two-part process.
 * First, we generate the ***Makefile***: "building instructions" for the hardware we want to build for.
-
+* Then, we build an executable with the generated instructions
+	* After making changes to code, only this part has to be done again.
 
 ## Building on Windows with MinGW
 
@@ -54,3 +57,20 @@ math: mathjax
 * To check MinGW works for you, open a new command prompt and run `gcc --version`
   * It should output `gcc (Rev6, Built by MSYS2 project) 12.2.0` or some other version
   * If the version is 4.8, building won't be successful and you need to update your MinGW 
+
+## Actually building
+
+* Open the command line in the TIC-80 project folder (see help for Windows [here](project-management/windows-file-explorer.md#open-command-line-in-the-current-folder))
+* Use `cd build` to navigate to the build folder
+* Run CMake:
+  * `cmake -G "MinGW Makefiles" ..`
+  * ***Note:*** To build the pro version, include the handle `-DBUILD_PRO=ON`
+  * This takes some time!
+  * If you see `Configuring done` and `Generating done` messages, it was successful.
+* Run `mingw32-make -j4`
+  * The built executable should appear under `build/bin`
+
+## Creating a fork of the TIC-80 repository
+
+* So, you want to make TIC-80 better.
+* WIP
