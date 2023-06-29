@@ -7,7 +7,7 @@ theme: borbtheme
 <!-- headingDivider: 3 -->
 <!-- class: invert -->
 
-# Command line and the environment
+# Command line and PATH
 
 ## Terminals
 
@@ -39,7 +39,7 @@ theme: borbtheme
 * To be able to run some program, like `git`, from any working directory, its installation folder needs to be added to ***System Path***
   * Usually, the software installer handles it for you
   * Sometimes, you need to do it yourself.
-* System path (or just Path) is one of the ***Environment variables***
+* System path (or just PATH) is one of the ***Environment variables***
 	* Search in Start menu for environment variables
 	* Choose *Edit the system environment variables*
 	* Click *Environment variables*

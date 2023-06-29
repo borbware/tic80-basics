@@ -1,9 +1,11 @@
 ---
 marp: true
 paginate: true
+theme: borbtheme
+math: mathjax
 ---
 <!-- headingDivider: 3 -->
-<!-- class: default -->
+<!-- class: invert -->
 
 # Achieve gamedev nirvana with TIC-80
 
