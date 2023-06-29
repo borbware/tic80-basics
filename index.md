@@ -2,6 +2,10 @@
 layout: default
 ---
 
+## Example repositories
+
+* [TIC-80 boilerplate](https://github.com/borbware/tic80-boilerplate): A multi-file project example
+
 The moon cycle 🌑🌒🌓🌔🌕 tells how done the material for the corresponding chapter is!
 
 ## TIC-80 Basics

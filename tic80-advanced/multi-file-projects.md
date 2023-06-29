@@ -61,3 +61,7 @@ Then, you can run luacc with command `luacc`. Let's continue with the previous e
 Here, `-i ./ main` means I'm using main.lua as the base file, and `-o game.lua` denotes the output file. `-p 6` means the combined code will be inserted after the sixth line in main.lua (which is two lines after the four mandatory commented lines in a TIC cartridge). If you have more required files, you have to include them all in the script call above! This is why I like to keep all the requires in the main.lua file, so it's easier to keep track of the files.
 
 After running this, you can export the cartridge `game.lua` normally.
+
+## Reading
+
+* [TIC-80 boilerplate](https://github.com/borbware/tic80-boilerplate): A multi-file project example
