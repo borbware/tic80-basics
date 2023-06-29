@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='{{ page.lang | default: site.lang | default: "en" }}'>
+  	{%- include head.html -%}
+	<head>
+		<script
+			type="text/javascript"
+			id="MathJax-script"
+			async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		<script>
+			MathJax = {
+				tex: {
+					inlineMath: [['$', '$']]
+				}
+			};
+		</script>
+	</head>
+	<body>
+		{%- include header.html -%}
+		
+		<main class="page-content" aria-label="Content">
+			<div class="wrapper">
+
+			<div class="page">
+				{%- if page.title -%}
+				<h1 class="page-heading">{{ page.title }}</h1>
+				{%- endif -%}
+				<article class="page-content">
+					{{ content }}
+				</article>
+			 
+			</div>
+		</div>
+		</main>
+		{%- include footer.html -%}
+	</body>
+</html>

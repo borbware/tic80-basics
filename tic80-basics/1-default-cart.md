@@ -152,12 +152,12 @@ if something then
     dostuff()
 end
 ```
-We could extend it with `else if` and `else`:
+We could extend it with `elseif` and `else`:
 
 ```Lua
 if something then
     doStuff()
-else if something_else then
+elseif something_else then
     doOtherStuff()
 else
     doCompletelyAnotherStuff()
@@ -383,6 +383,6 @@ To get the desired values $1$ and $3$ that our bigger 2-by-2 sprite needs, we mu
 
 And that's it! The animation works just like before. And not only that - we've gone through the whole default cart.
 
-Hopefully you now understand better how things work in TIC-80. But that was (mostly) only about the `code` editor - in the next lesson we'll get acquainted with the other ones!
+Hopefully you now understand better how things work in TIC-80. 
 
-See also [Part 2](https://github.com/nesbox/TIC-80/wiki/A-step-by-step-introduction-to-TIC-80,-Part-2:-Workflow) of this tutorial.
+But that was (mostly) only about the `code` editor - in the next lesson we'll get acquainted with the other editors!
