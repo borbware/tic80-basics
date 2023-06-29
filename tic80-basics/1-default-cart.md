@@ -39,7 +39,7 @@ At this point it would be nice to see _what made the cart act like it just did_.
 
 Press ***ESC*** to reveal the **code editor**. We can also use the shortcut button on the top left.
 
-```Lua
+```lua
 -- title:  game title
 -- author: game developer
 -- desc:   short description
@@ -71,7 +71,7 @@ The default cart is written in Lua, which is a programming language a bit like P
 
 In Lua, two dashes (`--`) mark the beginning of a _one-line comment_, marked grey. Normally, comments are _disregarded_ when executing the program. HOWEVER, the first four lines of the default cart are _special comments_, in which you can write down info about your game. The fourth line tells TIC which programming language the cart is written with, let's stick with Lua for now.
 
-```Lua
+```lua
 -- title:  Fantas.tic
 -- author: Borb
 -- desc:   An action-adventure game
@@ -82,7 +82,7 @@ In Lua, two dashes (`--`) mark the beginning of a _one-line comment_, marked gre
 
 Then, we declare some variables and give them values. It's easy in lua:
 
-```Lua
+```lua
 t=0
 x=96
 y=24
@@ -90,7 +90,7 @@ y=24
 
 The purpose of these three fellows (or at least x and y) might become a bit clearer by changing their values. Let's change x and y to zeroes with
 
-```Lua
+```lua
 x=0
 y=0
 ```
@@ -107,7 +107,7 @@ The smiling sprite is now in the top-left corner! The top-left corner is indeed 
 
 Let's continue onwards! Now we get to the most important function, the **main loop** of the game, `TIC()`.
 
-```Lua
+```lua
 function TIC()
     ...
 end
@@ -136,7 +136,7 @@ But what did we have inside `TIC()`, again?
 
 First, there were these four lines:
 
-```Lua
+```lua
 if btn(0) then y=y-1 end
 if btn(1) then y=y+1 end
 if btn(2) then x=x-1 end
@@ -147,14 +147,14 @@ if btn(3) then x=x+1 end
 
 A basic _if statement_ in Lua is of the form
 
-```Lua
+```lua
 if something then
     dostuff()
 end
 ```
 We could extend it with `elseif` and `else`:
 
-```Lua
+```lua
 if something then
     doStuff()
 elseif something_else then
@@ -176,7 +176,7 @@ Buttons are indexed with numbers in TIC-80:
 
 After the button pressing lines we have this function call:
 
-```Lua
+```lua
 cls(13)
 ```
 
@@ -198,13 +198,13 @@ So it's possible to change the background colour by changing the argument of the
 
 After `cls()` we have a rather nasty-looking statement.
 
-```Lua
+```lua
 spr(1+t%60//30_2,x,y,14,3,0,0,2,2)
 ```
 
 Let's... not dive into it yet. It's easier to explain first the last two lines:
 
-```Lua
+```lua
 print("HELLO WORLD!",84,84)
 ```
 This is the [print function](https://github.com/nesbox/TIC-80/wiki/print); it just draws the white text `HELLO WORLD` to coordinates 84, 84.
@@ -213,7 +213,7 @@ This is the [print function](https://github.com/nesbox/TIC-80/wiki/print); it ju
 
 Then we have
 
-```Lua
+```lua
 t=t+1
 ```
 
@@ -229,13 +229,13 @@ An important note: to be able to use the expression above, we have to have an _i
 
 Now we have reached the end of the `TIC()` function, so it's time to get back to this:
 
-```Lua
+```lua
 spr(1+t%60//30*2,x,y,14,3,0,0,2,2)
 ```
 
 The function is `spr()`, which draws a sprite from the sprite memory to the screen, right where we want it. Let's first go with a simpler example to understand the basics: change the line to
 
-```Lua
+```lua
 spr(1,x,y)
 ```
 
@@ -261,13 +261,13 @@ This essentially means that the function is called like this:
 
 Mind that the arguments in `[brackets]` are optional, having their _default values_ written out in description. That's why we can just call the function with
 
-```Lua
+```lua
 spr(1, x, y)
 ```
 
 , like we just did! It's the same as 
 
-```Lua
+```lua
 spr(1, x, y, -1, 1, 0, 0, 1, 1).
 ```
 
@@ -285,13 +285,13 @@ But let's not get ahead of ourselves, let's go back to `spr()`!
 
 The function description tells that if we want to draw _multiple sprites_ with just one spr() call, we adjust the width and height arguments! If we change them both to 2 and call the function as
 
-```Lua
+```lua
 spr(1, x, y, -1, 1, 0, 0, 2, 2)
 ```
 
 Now we see the whole 16x16 character! We can make it bigger by changing the scale back to 3:
 
-```Lua
+```lua
 spr(1, x, y, -1, 3, 0, 0, 2, 2)
 ```
 
@@ -299,13 +299,13 @@ spr(1, x, y, -1, 3, 0, 0, 2, 2)
 
 Now we'd like to get rid of the yellow background. There isn't a **transparent colour** in TIC-80, so we have to deliberately _choose_ which colour will be transparent with `colorkey`. By default all colours are drawn (it's -1), so to make yellow transparent, we change it to
 
-```Lua
+```lua
 spr(1, x, y, 14, 3, 0, 0, 2, 2)
 ```
 
 Now everything looks like before - _almost_. The original sprite was blinking - or jumping between two animation frames. We can get the other frame of the animation by calling spr like this:
 
-```Lua
+```lua
 spr(3, x, y, 14, 3, 0, 0, 2, 2)
 ```
 
@@ -313,7 +313,7 @@ spr(3, x, y, 14, 3, 0, 0, 2, 2)
 
 The original sprite call used a clever trick to make the value jump between 1 and 3 every half seconds (or 30 frames). We can test it by printing its value in the print() function:
 
-```Lua
+```lua
 print(1+t%60//30*2,84,84)
 ```
 
@@ -321,7 +321,7 @@ print(1+t%60//30*2,84,84)
 
 Let's break the value down:
 
-```Lua
+```lua
 1+t%60//30*2
 ```
 
@@ -343,7 +343,7 @@ Similarly, `t%2 `returns values $0,1,0,1,0,1,...$
 
 The modulo expression can be utilised to only return values $1$ and $3$ with
 
-```Lua
+```lua
 1+t%2*2
 ```
 
@@ -367,7 +367,7 @@ Let's denote the first part, $t\%60$, with $n$, so we can focus on the floor div
 
 Thus,
 
-```Lua
+```lua
 t%60//30
 ```
 
@@ -377,7 +377,7 @@ jumps between $0$ and $1$ every 30 frames!
 
 To get the desired values $1$ and $3$ that our bigger 2-by-2 sprite needs, we multiply this whole thing by $2$ and add $1$:
 
-```Lua
+```lua
 1+t%60//30*2
 ```
 

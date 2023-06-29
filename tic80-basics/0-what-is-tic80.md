@@ -112,13 +112,13 @@ Tracker view:
   * [Some others](https://github.com/nesbox/TIC-80/wiki/supported-languages) are supported as well
 * [Learn Lua in 15 minutes](https://tylerneylon.com/a/learn-lua/)
 * Lua is a Python-like dynamic language where indents don't matter. 
-  * ```Lua
+  * ```lua
   	if huge then return true end
 	```
-  * ```Lua
+  * ```lua
   	for i=1,10 do trace(i) end
 	```
-  * ```Lua
+  * ```lua
 	function increment(a) return a+1 end
 	```
 ---
@@ -126,7 +126,7 @@ Tracker view:
 * Variables are `global` by default (use the `local` keyword!)
 * Tables are everything and can have everything
   * You can have numbered and named keys in the same table
-	```Lua
+	```lua
 	tbl = {"hello", "world", name = "sillyTable",}
 	for index, value in pairs(tbl) do
 		trace(value)
@@ -134,7 +134,7 @@ Tracker view:
 	```
 * Gotchas
   * Table indexing starts from one: `tbl[1]`
-  * ```Lua
+  * ```lua
 	if a ~= 3 then trace("a is not 3") end
 	```
   * `+=` does not exist
@@ -234,7 +234,7 @@ Tracker view:
 	```
 ---
 * Math shorthands & helper functions
-	```Lua
+	```lua
 	pi=math.pi
 	max=math.max
 	min=math.min
@@ -263,7 +263,7 @@ Tracker view:
 
 ---
 * Table shorthands & helper functions
-	```Lua
+	```lua
 	str=string.format
 	del=table.remove
 	to=table.insert
@@ -296,7 +296,7 @@ Tracker view:
 	* [Deepcopy](deepcopy.lua) & [Table print](tableprint.lua)
 ### Simple structure example
 
-```Lua
+```lua
 ents = {}
 table.insert(ents, {
 	spr=1,x=0,y=0,
@@ -319,7 +319,7 @@ end
 ```
 
 ### Simple tile collision
-```Lua
+```lua
 
 function tile(x,y)
 	x,y=(x)//8,(y)//8 --floor division
