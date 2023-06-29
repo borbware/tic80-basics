@@ -41,15 +41,18 @@ math: mathjax
 * More hotkeys [here](https://github.com/nesbox/TIC-80/wiki/Hotkeys)
 
 ## Editors
+
 ### Code editor (F1)
 
 ![](imgs/code.gif)
 * 64KB of code
+
 ### Sprite editor (F2)
 
 ![](imgs/sprite.gif)
 * 512 8x8 sprites divided into foreground and background
 * Changeable 16-color palette
+
 ### Map editor (F3)
 
 ![](imgs/map.gif)
@@ -97,7 +100,9 @@ Tracker view:
 * Let's now remove the default code and try to recreate the important parts.
 * ***HOX:*** In version 1.0, you have to turn on *Dev Mode* to make transition between the game and the editors faster
   * `menu` *> Options > Dev Mode: ON*
+
 ---
+
 * The most important function we need is [TIC](https://github.com/nesbox/TIC-80/wiki/TIC), the ***main loop*** which runs in 60 fps.
   * Inside it, you put everything that you want to ***update & draw on screen***
 * So let's put a [print](https://github.com/nesbox/TIC-80/wiki/print) call inside it to draw ***text*** on screen
@@ -121,7 +126,9 @@ Tracker view:
   * ```lua
 	function increment(a) return a+1 end
 	```
+
 ---
+
 * By default, every variable has a "falsy" `nil` value
 * Variables are `global` by default (use the `local` keyword!)
 * Tables are everything and can have everything
@@ -139,12 +146,11 @@ Tracker view:
 	```
   * `+=` does not exist
 
-
 ## Important API functions
 
 * [API](https://github.com/nesbox/TIC-80/wiki/API)
-### Basics
 
+### Basics
 
 * [TIC](https://github.com/nesbox/TIC-80/wiki/TIC)
 	* Callback function for the main loop. Called once per frame, 60 times per second
@@ -152,7 +158,9 @@ Tracker view:
   * [trace](https://github.com/nesbox/TIC-80/wiki/trace): Print to console "`Debug.Log`"
   * [time](https://github.com/nesbox/TIC-80/wiki/time): Get time passed after the game started
   * [reset](https://github.com/nesbox/TIC-80/wiki/reset): Reset the game
+
 ### Drawing
+
 * [cls](https://github.com/nesbox/TIC-80/wiki/cls): Clear screen
 * [print](https://github.com/nesbox/TIC-80/wiki/print): Print text
 * [spr](https://github.com/nesbox/TIC-80/wiki/spr): Draw sprite
@@ -162,6 +170,7 @@ Tracker view:
 * [circ](https://github.com/nesbox/TIC-80/wiki/circ) & [circb](https://github.com/nesbox/TIC-80/wiki/circb): Circle & Circle border
 * [tri](https://github.com/nesbox/TIC-80/wiki/tri), [ttri](https://github.com/nesbox/TIC-80/wiki/ttri) & [trib](https://github.com/nesbox/TIC-80/wiki/trib): Triangle, Textured triangle & Triangle border
 * [rect](https://github.com/nesbox/TIC-80/wiki/rect) & [rectb](https://github.com/nesbox/TIC-80/wiki/rectb): Rectangle & Rectangle border
+
 ### Input
 
 * Controller & keyboard (by default, ABXY buttons are mapped to ZXAS keys)
@@ -185,6 +194,7 @@ Tracker view:
 * [pmem](https://github.com/nesbox/TIC-80/wiki/pmem): Get or set value in persistent memory (load & save!)
 * [peek*](https://github.com/nesbox/TIC-80/wiki/peek) & [poke*](https://github.com/nesbox/TIC-80/wiki/poke): manipulate internal RAM & VRAM
   * [Memory layout](https://github.com/nesbox/TIC-80/wiki/RAM)
+
 ### Tricks
 
 * [BDR](https://github.com/nesbox/TIC-80/wiki/BDR)
@@ -192,7 +202,6 @@ Tracker view:
   * Called 143 times per frame 
 * [Manipulating the color palette](https://github.com/nesbox/TIC-80/wiki/palette)
 * [More graphics with less colors: bits per pixel](https://github.com/nesbox/TIC-80/wiki/Bits-Per-Pixel)
-
 
 ## Console
 
@@ -218,6 +227,7 @@ Tracker view:
 -->
 
 ## Examples
+
 ### Boilerplate code
 
 * Button indices (so no need to remember numbers with btn)
@@ -262,6 +272,7 @@ Tracker view:
 	```
 
 ---
+
 * Table shorthands & helper functions
 	```lua
 	str=string.format
@@ -293,7 +304,8 @@ Tracker view:
 		end, t,#t+1
 	end
 	```
-	* [Deepcopy](deepcopy.lua) & [Table print](tableprint.lua)
+	* [Deepcopy](../code-examples/deepcopy.lua) & [Table print](../code-examples/tableprint.lua)
+
 ### Simple structure example
 
 ```lua
@@ -319,6 +331,7 @@ end
 ```
 
 ### Simple tile collision
+
 ```lua
 
 function tile(x,y)
@@ -399,4 +412,4 @@ end
 * Create retro-ish games with direct memory access 
   * ...but with the convenience of dynamic programming languages
   * (bonus: get cool retro glitches!)
-* Wishlist [EMUUROM](www.emuurom.com)
+* Wishlist [EMUUROM](https://www.emuurom.com)

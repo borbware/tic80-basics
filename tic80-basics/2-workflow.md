@@ -9,7 +9,7 @@ math: mathjax
 
 # 2. Workflow
 
-In [Part 1](https://github.com/nesbox/TIC-80/wiki/A-step-by-step-introduction-to-TIC-80,-Part-1:-The-Default-Cart), we went through the default cart of TIC-80. Now it's time to go through the general workflow of making games with TIC-80.
+Now it's time to go through the general workflow of making games with TIC-80.
 
 _**Note:**_ This part of the tutorial is still work in progress.
 

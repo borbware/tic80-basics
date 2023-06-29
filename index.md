@@ -13,7 +13,7 @@ If you have any suggestions, hit me up - I'm `@borbware` on Discord.
 * [Official TIC-80 wiki](https://github.com/nesbox/TIC-80/wiki)
   * [Tutorials](https://github.com/nesbox/TIC-80/wiki/tutorials)
   * [Code snippets](https://github.com/nesbox/TIC-80/wiki/code-examples-and-snippets)
-* [TIC-80 Manual & Cheat Sheet webpage](https://skyelynwaddell.github.io/tic80-manual-cheatsheet/) by skye
+* [TIC-80 Manual & Cheat Sheet webpage](https://skyelynwaddell.github.io/tic80-manual-cheatsheet/) by skye & parlortricks
 * [TIC-80 Cheat sheet pdf](https://zenithsal.com/assets/documents/tic-80_cheatsheet.pdf)
 * [TIC-80 sizecoding](http://www.sizecoding.org/wiki/TIC-80)
 
@@ -32,7 +32,7 @@ If you have any suggestions, hit me up - I'm `@borbware` on Discord.
 | 0   | What is TIC-80?  | [🎞](tic80-basics/0-what-is-tic80-slides.html) | [📖](tic80-basics/0-what-is-tic80) |    🌕 |
 | 1   | The default cart | [🎞](tic80-basics/1-default-cart-slides.html)  | [📖](tic80-basics/1-default-cart)  |    🌕 |
 | 2   | Workflow         | [🎞](tic80-basics/2-workflow-slides.html)      | [📖](tic80-basics/2-workflow)      |    🌒 |
-| 3   | API              | [🎞](tic80-basics/3-api-slides.html)           | [📖](tic80-basics/3-api)           |    🌒 |
+| 3   | API              | [🎞](tic80-basics/3-API-slides.html)           | [📖](tic80-basics/3-API)           |    🌒 |
 
 ## TIC-80 Advanced
 

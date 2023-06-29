@@ -53,7 +53,7 @@ math: mathjax
 
 * Unzip the archive.
 * Move the `mingw64` folder to `C:\` (or whatever you'd like)
-* Add the `C:\mingw64` folder to system path environment variables (see instructions [here](project-management/command-line-and-the-environment.md#windows-environment-variables))
+* Add the `C:\mingw64` folder to system path environment variables (see instructions [here](project-management/command-line-and-path#windows-environment-variables))
 
 ### Check that MinGW works
 
