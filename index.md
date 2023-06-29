@@ -2,11 +2,19 @@
 layout: default
 ---
 
+# TIC-80 basics course
+
+This webpage contains TIC-80 resources made by [borb](https://borbware.itch.io/), the developer of [EMUUROM](https://store.steampowered.com/app/1634360/EMUUROM/) - the first TIC-80 game on Steam!
+
+The aim of this page is to teach the basics of game development with TIC-80, programming with Lua, and version control with Git. The page is still very much ***work in progress***, so adjust your expectations accordingly. All materials are linked below, readable as slides (🎞) or as a single page (📖). The moon cycle 🌑🌒🌓🌔🌕 tells how done the material for the corresponding topic is!
+
+If you have any suggestions, hit me up - I'm `@borbware` on Discord.
+
 ## Example repositories
 
 * [TIC-80 boilerplate](https://github.com/borbware/tic80-boilerplate): A multi-file project example
+* More to come!
 
-The moon cycle 🌑🌒🌓🌔🌕 tells how done the material for the corresponding chapter is!
 
 ## TIC-80 Basics
 
