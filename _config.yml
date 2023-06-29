@@ -20,7 +20,7 @@
 
 title: TIC-80 basics course
 description: >- # this means to ignore newlines until "baseurl:"
-  Resources for learning game development basics with TIC-80. Wishlist [EMUUROM](https://store.steampowered.com/app/1634360/EMUUROM/)!
+  Resources for learning gamedev with TIC-80. Wishlist EMUUROM!
 baseurl: "/tic80-basics" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: borbware
