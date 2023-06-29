@@ -8,6 +8,17 @@ The aim of this page is to teach the basics of game development with TIC-80, pro
 
 If you have any suggestions, hit me up - I'm `@borbware` on Discord.
 
+## External resources
+
+* [Official TIC-80 wiki](https://github.com/nesbox/TIC-80/wiki)
+  * [Tutorials](https://github.com/nesbox/TIC-80/wiki/tutorials)
+  * [Code snippets](https://github.com/nesbox/TIC-80/wiki/code-examples-and-snippets)
+* [TIC-80 Manual & Cheat Sheet webpage](https://skyelynwaddell.github.io/tic80-manual-cheatsheet/) by skye
+* [TIC-80 Cheat sheet pdf](https://zenithsal.com/assets/documents/tic-80_cheatsheet.pdf)
+* [TIC-80 sizecoding](http://www.sizecoding.org/wiki/TIC-80)
+
+
+
 ## Example repositories
 
 * [TIC-80 boilerplate](https://github.com/borbware/tic80-boilerplate): A multi-file project example
