@@ -98,3 +98,7 @@ mingw32-make: *** [Makefile:135: all] Error 2
 * Clone your TIC-80 repo
 * Add the original repo as a new remote:
   * `git remote add nesbox https://github.com/nesbox/TIC-80.git`
+
+## Reading
+
+* [Exporting a game from a custom build](https://gist.github.com/scambier/a72f8dafa1f7b9fd3ca136125a54c21b)
