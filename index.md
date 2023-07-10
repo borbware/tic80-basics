@@ -22,6 +22,7 @@ If you have any suggestions, hit me up - I'm `@borbware` on Discord.
 ## Example repositories
 
 * [TIC-80 boilerplate](https://github.com/borbware/tic80-boilerplate): A multi-file project example
+* [TIC-80 demo workshop by creativenucleus](https://github.com/creativenucleus/tic-80-demo-workshop/tree/main): Coding graphical effects
 * More to come!
 
 
