@@ -16,6 +16,7 @@ If you have any suggestions, hit me up - I'm `@borbware` on Discord.
 * [TIC-80 Manual & Cheat Sheet webpage](https://skyelynwaddell.github.io/tic80-manual-cheatsheet/) by skye & parlortricks
 * [TIC-80 Cheat sheet pdf](https://zenithsal.com/assets/documents/tic-80_cheatsheet.pdf)
 * [TIC-80 sizecoding](http://www.sizecoding.org/wiki/TIC-80)
+* [Awesome TIC-80](https://github.com/stefandevai/awesome-tic-80): A curated list of tutorials, resources and links
 
 
 
