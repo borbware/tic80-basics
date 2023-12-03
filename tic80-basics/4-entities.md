@@ -19,6 +19,8 @@ math: mathjax
 entity={
 	x=0,
 	y=0,
+	w=8,
+	h=8,
 	init=function(ent)
 		to(entities,ent)
 	end,
@@ -42,7 +44,6 @@ function TIC()
 		ent:drw()
 	end
 end
-
 ```
 
 

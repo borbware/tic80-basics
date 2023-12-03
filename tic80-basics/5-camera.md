@@ -46,4 +46,38 @@ math: mathjax
 	```lua
 	map(cam.x//8, cam.y//8, 31,18, -(cam.x%8), -(cam.y%8))
 	```
- 
+
+## Moving the camera
+
+* We can add an update method for the `cam` entity and update it in the main loop.
+  * For instance, if we want the camera to center on the player:
+
+	```lua
+	cam={
+		x=0,
+		y=0,
+		w=240,
+		h=136
+		upd=function(cam)
+			cam.x,cam.y=
+				player.x+player.w/2-cam.w/2,
+				player.y+player.h/2-cam.h/2
+		end,
+	}
+	```
+
+### Calling `cam.upd()`
+
+* I usually don't add special entities like camera to the `entities` table, and instead call their methods directly:
+
+```lua
+function TIC()
+	for i,ent in ipairs(entities)do
+		ent:upd()
+	end
+	cam:upd()
+	for i,ent in ipairs(entities)do
+		ent:drw()
+	end
+end
+```
