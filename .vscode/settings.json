@@ -1,10 +1,12 @@
 {
 	"markdown.marp.themes": ["./themes/borbtheme.css"],
-	"emeraldwalk.runonsave": {
+	"saveAndRun": {
 		"commands": [
 			{
-				"match": "\\.md$",
-				"cmd": "cd ${fileDirname} && echo marp ${fileBasename} -o ${fileBasenameNoExt}-slides.html --html true"
+			"match": "\\.md$",
+			"cmd": "marp ${fileDirname}\\${fileBasename} -o ${fileDirname}\\${fileBasenameNoExt}-slides.html --html true",
+			"useShortcut": false,
+			"silent": false
 			},
 		]
 	}
