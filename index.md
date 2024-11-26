@@ -16,44 +16,48 @@ If you have any suggestions, hit me up - I'm `@borbware` on Discord.
 * [TIC-80 Manual & Cheat Sheet webpage](https://skyelynwaddell.github.io/tic80-manual-cheatsheet/) by skye & parlortricks
 * [TIC-80 Cheat sheet pdf](https://zenithsal.com/assets/documents/tic-80_cheatsheet.pdf)
 * [TIC-80 sizecoding](http://www.sizecoding.org/wiki/TIC-80)
+* [Awesome TIC-80](https://github.com/stefandevai/awesome-tic-80): A curated list of tutorials, resources and links
 
 
 
 ## Example repositories
 
 * [TIC-80 boilerplate](https://github.com/borbware/tic80-boilerplate): A multi-file project example
+* [TIC-80 demo workshop by creativenucleus](https://github.com/creativenucleus/tic-80-demo-workshop/tree/main): Coding graphical effects
 * More to come!
 
 
 ## TIC-80 Basics
 
-|     |                  | Slides                                        | Page                              |      |
-| --- | ---------------- | --------------------------------------------- | --------------------------------- | ---: |
-| 0   | What is TIC-80?  | [🎞](tic80-basics/0-what-is-tic80-slides.html) | [📖](tic80-basics/0-what-is-tic80) |    🌕 |
-| 1   | The default cart | [🎞](tic80-basics/1-default-cart-slides.html)  | [📖](tic80-basics/1-default-cart)  |    🌕 |
-| 2   | Workflow         | [🎞](tic80-basics/2-workflow-slides.html)      | [📖](tic80-basics/2-workflow)      |    🌒 |
-| 3   | API              | [🎞](tic80-basics/3-API-slides.html)           | [📖](tic80-basics/3-API)           |    🌒 |
+|   |                  | Slides                                         | Page                               |    |
+|---|------------------|------------------------------------------------|------------------------------------|---:|
+| 0 | What is TIC-80?  | [🎞](tic80-basics/0-what-is-tic80-slides.html) | [📖](tic80-basics/0-what-is-tic80) | 🌕 |
+| 1 | The default cart | [🎞](tic80-basics/1-default-cart-slides.html)  | [📖](tic80-basics/1-default-cart)  | 🌕 |
+| 2 | Workflow         | [🎞](tic80-basics/2-workflow-slides.html)      | [📖](tic80-basics/2-workflow)      | 🌒 |
+| 3 | API              | [🎞](tic80-basics/3-API-slides.html)           | [📖](tic80-basics/3-API)           | 🌒 |
+| 4 | Entities         | [🎞](tic80-basics/4-entities-slides.html)      | [📖](tic80-basics/4-entities)      | 🌒 |
+| 5 | Camera           | [🎞](tic80-basics/5-camera-slides.html)        | [📖](tic80-basics/5-camera)        | 🌒 |
 
 ## TIC-80 Advanced
 
-|     |                     | Slides                                              | Page                                    |      |
-| --- | ------------------- | --------------------------------------------------- | --------------------------------------- | ---: |
-|     | Building TIC-80     | [🎞](tic80-advanced/building-tic80-slides.html)      | [📖](tic80-advanced/building-tic80)      |    🌒 |
-|     | Multi-file projects | [🎞](tic80-advanced/multi-file-projects-slides.html) | [📖](tic80-advanced/multi-file-projects) |    🌒 |
+|  |                     | Slides                                               | Page                                     |    |
+|--|---------------------|------------------------------------------------------|------------------------------------------|---:|
+|  | Building TIC-80     | [🎞](tic80-advanced/building-tic80-slides.html)      | [📖](tic80-advanced/building-tic80)      | 🌒 |
+|  | Multi-file projects | [🎞](tic80-advanced/multi-file-projects-slides.html) | [📖](tic80-advanced/multi-file-projects) | 🌒 |
 
 ## Project management
 
-|     |                       | Slides                                                    | Page                                          |      |
-| --- | --------------------- | --------------------------------------------------------- | --------------------------------------------- | ---: |
-|     | Command line and PATH | [🎞](project-management/command-line-and-path-slides.html) | [📖](project-management/command-line-and-path) |    🌓 |
-|     | Windows file explorer | [🎞](project-management/windows-file-explorer-slides.html) | [📖](project-management/windows-file-explorer) |    🌓 |
+|  |                       | Slides                                                     | Page                                           |    |
+|--|-----------------------|------------------------------------------------------------|------------------------------------------------|---:|
+|  | Command line and PATH | [🎞](project-management/command-line-and-path-slides.html) | [📖](project-management/command-line-and-path) | 🌓 |
+|  | Windows file explorer | [🎞](project-management/windows-file-explorer-slides.html) | [📖](project-management/windows-file-explorer) | 🌓 |
 
 ## Using Git
 
-|     |                 | Slides                               | Page                     |      |
-| --- | --------------- | ------------------------------------ | ------------------------ | ---: |
-| 0   | Git setup       | [🎞](git/0-git-setup-slides.html)     | [📖](git/0-git-setup)     |    🌕 |
-| 1   | Git basics      | [🎞](git/1-git-basics-slides.html)    | [📖](git/1-git-basics)    |    🌕 |
-| 2   | Git continued   | [🎞](git/2-git-continued-slides.html) | [📖](git/2-git-continued) |    🌕 |
-| 3   | GitHub tools    | [🎞](git/3-github-tools-slides.html)  | [📖](git/3-github-tools)  |    🌔 |
-|     | Git cheat sheet | [🎞](git/git-cheat-sheet-slides.html) | [📖](git/git-cheat-sheet) |    🌕 |
+|   |                 | Slides                                | Page                      |    |
+|---|-----------------|---------------------------------------|---------------------------|---:|
+| 0 | Git setup       | [🎞](git/0-git-setup-slides.html)     | [📖](git/0-git-setup)     | 🌕 |
+| 1 | Git basics      | [🎞](git/1-git-basics-slides.html)    | [📖](git/1-git-basics)    | 🌕 |
+| 2 | Git continued   | [🎞](git/2-git-continued-slides.html) | [📖](git/2-git-continued) | 🌕 |
+| 3 | GitHub tools    | [🎞](git/3-github-tools-slides.html)  | [📖](git/3-github-tools)  | 🌔 |
+|   | Git cheat sheet | [🎞](git/git-cheat-sheet-slides.html) | [📖](git/git-cheat-sheet) | 🌕 |
